@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calley - Intelligent Sales Automation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Guerret:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,9 +12,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3B82F6',
-                        secondary: '#10B981',
-                        neutral: '#F3F4F6',
+                        primary: '#8F75DA',
+                        secondary: '#F2F2F2',
+                        neutral: '#F7F7F7',
                     },
                     fontFamily: {
                         sans: ['Guerret', 'sans-serif'],
@@ -28,30 +28,98 @@
         body {
             font-family: 'Guerret', sans-serif;
         }
-        .playfair {
-            font-family: 'Guerret', serif;
-        }
+
         .hero-bg {
             background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
         }
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
+
+        /*.overlay {
+            background-color: rgba(143, 117, 218, 0.7);
+        }*/
+
+        .animate__animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .animate__fadeInUp {
+            animation-name: fadeInUp;
+        }
+
+        .animate__fadeInDown {
+            animation-name: fadeInDown;
+        }
+
+        .animate__fadeInLeft {
+            animation-name: fadeInLeft;
+        }
+
+        .animate__fadeInRight {
+            animation-name: fadeInRight;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translate3d(100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
         }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-secondary text-gray-800">
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-primary playfair">Calley</div>
-                <div class="hidden md:flex space-x-8">
+                <div class="text-2xl font-bold text-primary animate__animated animate__fadeInLeft">Calley</div>
+                <div class="hidden md:flex space-x-8 animate__animated animate__fadeInRight">
                     <a href="#features" class="text-gray-600 hover:text-primary transition duration-300">Features</a>
                     <a href="#benefits" class="text-gray-600 hover:text-primary transition duration-300">Benefits</a>
                     <a href="#contact" class="text-gray-600 hover:text-primary transition duration-300">Contact</a>
                 </div>
-                <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition duration-300">Join Us</a>
+                <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition duration-300 animate__animated animate__fadeInUp">Join Us</a>
             </div>
         </nav>
     </header>
@@ -60,40 +128,40 @@
    
         <section class="hero-bg relative">
             <div class="overlay absolute inset-0"></div>
-            <div class="container mx-auto px-6 py-32 relative z-10 text-center text-white">
-                <h1 class="text-6xl font-bold mb-6 playfair">Revolutionize grunt cold calling with AI</h1>
-                <p class="text-2xl mb-10 max-w-2xl mx-auto">Automate Sales,HR,Recruitement,Outreach and Customer support with our software.</p>
-                <a href="https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin=Marketing&origin=RevampFRE&subpage=design&id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__Xs3Cu9UM1pLMERaRVNBRFU5RjJPUklWMEFSWUlKSS4u" class="bg-white text-primary px-8 py-3 rounded-full text-lg font-semibold hover:bg-neutral transition duration-300 inline-block">Join Waitlist</a>
+            <div class="container mx-auto px-6 py-32 relative z-10 text-center custom-stripe-color">
+                <h1 class="text-6xl font-bold mb-6 animate__animated animate__fadeInDown">Supercharge Your B2B Sales with AI</h1>
+                <p class="text-2xl mb-10 max-w-2xl mx-auto animate__animated animate__fadeInUp">Automate your sales, HR, recruitment, outreach, and customer support processes with our powerful AI-driven platform.</p>
+                <a href="https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin=Marketing&origin=RevampFRE&subpage=design&id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__Xs3Cu9UM1pLMERaRVNBRFU5RjJPUklWMEFSWUlKSS4u" class="bg-white text-primary px-8 py-3 rounded-full text-lg font-semibold hover:bg-neutral transition duration-300 inline-block animate__animated animate__fadeInUp">Join Waitlist</a>
             </div>
         </section>
 
         <!-- Features Section -->
         <section id="features" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 playfair">Key Features</h2>
+                <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 animate__animated animate__fadeInDown">Key Features</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                    <div class="text-center">
+                    <div class="text-center animate__animated animate__fadeInLeft">
                         <div class="mb-6">
                             <img src="https://cdn-icons-png.flaticon.com/512/3616/3616961.png" alt="24/7 Calling" class="w-24 h-24 mx-auto">
                         </div>
                         <h3 class="text-xl font-semibold mb-4">24/7 Automated Calling</h3>
                         <p class="text-gray-600">Never miss an opportunity with round-the-clock outreach capabilities. You can handle both local and international customers with our solution and minimal human resources.</p>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center animate__animated animate__fadeInRight">
                         <div class="mb-6">
                             <img src="https://cdn-icons-png.flaticon.com/512/1870/1870162.png" alt="Human-like Conversations" class="w-24 h-24 mx-auto">
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Human-like Conversations</h3>
                         <p class="text-gray-600">Engage leads with human-like speech and understanding.</p>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center animate__animated animate__fadeInLeft">
                         <div class="mb-6">
                             <img src="https://cdn-icons-png.flaticon.com/512/4727/4727424.png" alt="Lead Qualification" class="w-24 h-24 mx-auto">
                         </div>
                         <h3 class="text-xl font-semibold mb-4">Generate report from insights.</h3>
                         <p class="text-gray-600">Automatically identify and prioritize the most promising leads after a conversation with them.</p>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center animate__animated animate__fadeInRight">
                         <div class="mb-6">
                             <img src="https://cdn-icons-png.flaticon.com/512/6897/6897039.png" alt="Scalable Solution" class="w-24 h-24 mx-auto">
                         </div>
@@ -107,22 +175,22 @@
         <!-- Benefits Section -->
         <section id="benefits" class="py-20 bg-neutral">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 playfair">Why Choose Calley?</h2>
+                <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 animate__animated animate__fadeInDown">Why Choose Calley?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
                         <h3 class="text-2xl font-semibold mb-4 text-primary">Increase Efficiency</h3>
                         <p class="text-gray-600">Our AI software works tirelessly, making hundreds of calls, maximizing your team's productivity.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInRight">
                         <h3 class="text-2xl font-semibold mb-4 text-primary">Qualify Leads Faster</h3>
                         <p class="text-gray-600">Identify and prioritize promising leads, allowing your sales team to focus on closing deals.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
                         <h3 class="text-2xl font-semibold mb-4 text-primary">Reduce Costs</h3>
                         <p class="text-gray-600">Automate repetitive tasks and cut operational costs significantly.</p>
                         <p class="text-gray-600">Makes the need of recording all business calls redundant.</p>
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInRight">
                         <h3 class="text-2xl font-semibold mb-4 text-primary">Scale Your Outreach</h3>
                         <p class="text-gray-600">Grow your sales efforts exponentially without increasing your team size.</p>
                         <p class="text-gray-600">Identify promising leads from generated report and direct the deal closure to sales team.</p>
@@ -132,11 +200,11 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-white">
+        <section id="contact" class="py-20 bg-secondary">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold mb-8 playfair">Ready to Transform Your Sales Process?</h2>
-                <p class="text-2xl mb-12 max-w-2xl mx-auto">Contact us today for a personalized demo and see how Calley can help.</p>
-                <a href="#" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300 inline-block">Get Started Now</a>
+                <h2 class="text-4xl font-bold mb-8 animate__animated animate__fadeInDown">Ready to Transform Your B2B Sales Process?</h2>
+                <p class="text-2xl mb-12 max-w-2xl mx-auto animate__animated animate__fadeInUp">Contact us today for a personalized demo and see how Calley can help.</p>
+                <a href="#" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-neutral transition duration-300 inline-block animate__animated animate__fadeInUp">Get Started Now</a>
             </div>
         </section>
     </main>
@@ -145,11 +213,11 @@
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <h2 class="text-2xl font-bold text-primary playfair">Calley</h2>
+                <div class="mb-6 md:mb-0 animate__animated animate__fadeInLeft">
+                    <h2 class="text-2xl font-bold text-primary">Calley</h2>
                     <p class="mt-2 text-gray-400">Intelligent Sales Automation</p>
                 </div>
-                <div class="flex space-x-6">
+                <div class="flex space-x-6 animate__animated animate__fadeInRight">
                     <a href="#" class="text-gray-400 hover:text-primary transition duration-300">Privacy Policy</a>
                     <a href="#" class="text-gray-400 hover:text-primary transition duration-300">Terms of Service</a>
                     <a href="#" class="text-gray-400 hover:text-primary transition duration-300">Contact Us</a>
@@ -159,3 +227,6 @@
     </footer>
 </body>
 </html>
+
+<!-- https://wallpapers.com/images/hd/sales-2400-x-1040-background-9m2kpw8e3orzt458.jpg -->
+ <!-- https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80 -->
